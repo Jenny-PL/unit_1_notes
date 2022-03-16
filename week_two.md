@@ -4,6 +4,7 @@
 1. Download, learn to use 'rectangles' app
 2. Learn how to check git status in VS Code
 3. Once files are pushed to github... how to merge?
+4. 
 ---
 ## Tuples & Sets, Lists & Dictionaries
 1. **Lists:** Mutable, ordered, indexible, can use len()
