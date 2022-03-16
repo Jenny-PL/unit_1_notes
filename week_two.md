@@ -50,7 +50,7 @@ set_a.issubset(set_b)
 ---
 ## Variables & Memory
 - Scope: Where in your code can you access yoru variable? (local vs. global)
-
+- Tool for seeing what your code is doing: [Python Tutor](https://cs1110.cs.cornell.edu/tutor/#mode=edit0)
 ---
 ## Tests
 - Automated Tests
@@ -96,3 +96,43 @@ A directory that stores project files
 <mark>Projects are not tracked with Git (and therefore don't use Git) until it is initialized as a Git project.</mark>
 
 To turn any folder into a Git project, run this command in the project root: **$ git init**
+
+### More on Git commits:
+- **git diff:** will show changes that have been made.
+- good commit size is **one** meaningful change.   
+- **git status**: This will tell us what is in the staging area
+  
+**To make a commit: (1) Put in staging area, (2) then commit.**
+- *local changes area* (only on my computer)-->  **"git add <file_name>"** or **"git add ."**--> *initial staging area*
+
+
+- Alternate: **git add -p** This will allow you to go throught the local changes 'hunk' by 'hunk' and choose y/n about whether to add to the staging area.
+--- 
+## Packages 
+- a package is a collection of Python modules (ie- pytest, etc)
+- Module:  every .py file is a module
+- Managing a package: important, to avoid breaking our code!
+- pip: packaging installer for python; can use it (in terminal) to install any package in PyPI.
+  - We will use <mark> pip3 </mark> to install packages to work with python3.
+- PyPI: Python Packaging Index
+- To list all packages on the computer: **pip3 list**
+
+### Important concept: installing in virtual environments vs. global 
+- requirements.txt will specify the packages and versions required to work collaberatively on a project.
+- You can download these packages to a virtual environment so that everyone is working with the same versions/materials.
+  - You will have a new virtual environment for new projects
+- If a virtual environment is made w/Python3, when we're inside this activated environment, we can use **python3** or **python** as commands to mean Python3.
+## Using virtual environments
+1. Making:
+     - python3 -m venv venv
+3. Activating:
+   -  $ source venv/bin/activate
+   - We know we are in the virtual environment(venv) because the command line changes:   
+  <mark>(venv) $ project-root-folder </mark>
+3. Install packages in the virtual enir:
+   - pip install -r requirements.txt  
+   - pip install <package_name> 
+4. Deactivating
+   - . $ deactivate
+   - Command line will change back:   
+   - <mark>$ project-root-folder</mark>  
