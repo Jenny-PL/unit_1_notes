@@ -2,7 +2,8 @@
 
 <mark>Need to follow up on: </mark>
 1. Download, learn to use 'rectangles' app
-2. 
+2. Learn how to check git status in VS Code
+3. Once files are pushed to github... how to merge?
 ---
 ## Tuples & Sets, Lists & Dictionaries
 1. **Lists:** Mutable, ordered, indexible, can use len()
@@ -103,10 +104,21 @@ To turn any folder into a Git project, run this command in the project root: **$
 - **git status**: This will tell us what is in the staging area
   
 **To make a commit: (1) Put in staging area, (2) then commit.**
-- *local changes area* (only on my computer)-->  **"git add <file_name>"** or **"git add ."**--> *initial staging area*
-
+- *local changes area* (only on my computer)-->  **git add <file_name>** or **git add .**--> *staging area* --> **git commmit -m "message describing the changes"**
 
 - Alternate: **git add -p** This will allow you to go throught the local changes 'hunk' by 'hunk' and choose y/n about whether to add to the staging area.
+
+Steps:
+1. git add
+2. git commit
+3. git push
+
+### Pushing to github:
+  - Copy link from github.
+  - git remote add origin [copied web address]
+  -     git remote add origin https://github.com/yourname/yourproject.git
+  - Push your branch to Github:
+  -     git push -u origin main
 --- 
 ## Packages 
 - a package is a collection of Python modules (ie- pytest, etc)
