@@ -4,7 +4,10 @@
 1. Download, learn to use 'rectangles' app
 2. Learn how to check git status in VS Code
 3. Once files are pushed to github... how to merge?
-4. 
+4. Watch Auberon class for TDD?  
+5. Practice writing tests for some of the code in Learn?
+   
+6. Algorithum intro from digital [algo practice](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=22802e07-ea29-40b2-a856-ae5a0014633c)    and [slides](https://docs.google.com/presentation/d/1gpkEZ-UsCVozLJ7E1fH-MZVc0-rwh1kpIYIwCT7CG4w/edit#slide=id.g115ca252154_0_59) and [solutions](https://docs.google.com/presentation/d/1yw9QRWIMabkGjRijNH8Qec9YlBI0_7HouczAv8F_miI/edit#slide=id.g117a86c46dc_0_73)
 ---
 ## Tuples & Sets, Lists & Dictionaries
 1. **Lists:** Mutable, ordered, indexible, can use len()
@@ -87,7 +90,7 @@ set_a.issubset(set_b)
 Git is a version control system (VCS) that has widespread use.  A VCS makes snapshots of files to be later referenced as a version; the files are organized into repositiories.
 - In order to use Git to compare versions, sometimes we will need to tell Git to track different files in a project.  
 - ??? Q about the above: isn't that the main purpose of git?
-
+ [Good basic summary of git, including common commands](https://www.ayyjohn.com/posts/daily-git)
 ### Repositories: 'repos' (aka folder, directory)
 A directory that stores project files
 ### Commits:
