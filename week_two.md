@@ -160,3 +160,7 @@ Steps:
    - . $ deactivate
    - Command line will change back:   
    - <mark>$ project-root-folder</mark>  
+
+## Iterations
+**continue**: skips the rest of the code in that iteration, goes to the next iteration vs.  
+**break:** leaves the loop.  
