@@ -12,8 +12,8 @@
 ## Tuples & Sets, Lists & Dictionaries
 1. **Lists:** Mutable, ordered, indexible, can use len()
 > Lists use square brackets [1,2,3]
-lists.append()
-lists.remove()
+lists.append(new_item)
+lists.remove(item_to_remove)
 
 2. **Dictionaries:** Mutable, good for mapping relationships. Good for detecting frequency of data(?)
 > Dictionaries use curly brackets {key:value, key:value}
@@ -22,13 +22,29 @@ lists.remove()
 - add new key:value pair: dict_name[key] = value
    
 3. **Tuples:** Immutable-- length cannot change (however the elements within the tuples are mutable), ordered, ie- can index, often used to as a way to return multiple values from a function
-> Tuples use parenthesis (data1, data2)
-   
-4. **Sets:** No repeated values, good tool for comparing sets of data, can use len(), should only have immituable values within it; it is unordered.
+> Tuples use parenthesis (data1, data2)  
+> tuple_example = tuple([1,3,5,7], "odd numbers")
+- Single elment tuple wil have a comma following the single element. 
+  - fruit = ('apple',)
+- Tuples support concatination (+) and repitition (*)
+1. **Sets:** No repeated values, good tool for comparing sets of data, can use len(), should only have **immituable values** within it; it is unordered.
 > Sets use curly brackets {data1, data2}
 - new set = set() 
 - new set = {value1, value2 }
+- color_set.add('blue')
+- color_set.remove('yellow')
+- color_set.discard('orange')
+  - Both .remove() and .discard() will remove items, but **remove() will raise KeyError if element is not present**, while discard() will not.
+- color_set.pop() Returns a **random** element.
+- color_set.clear() Empties a set.
+
+
+
+
 - **union**: all the elements in input sets (union or |)
+  - all_students = class_one.union(class_two)
+  - new_set = set_a.union(set_b)
+  - new_set = set_a | set_b
 - **intersection**: all the common elements (only the elements in all inputs:   
     **new_set = set_a.instersection(set_b)  
     new_set = set_a & set_b**  
@@ -36,11 +52,11 @@ lists.remove()
 - **difference**: All the elements of the first set, except any also in the 2nd set (all the district elements in the first set):  
 **new_set = set_a.difference(set_b) or  
 new_set = set_a - set_b**
-- 'disjoint': No common elements.
+- **'disjoint':** No common elements.
   set_a.isdisjoint(set_b) == True or False
-- subset: all the elements in set_a are contained in set_b?
+- **subset**: all the elements in set_a are contained in set_b?
 set_a.issubset(set_b)
-- You will get a TypeError if you try to add a mutable data type into a set.
+- You will get a TypeError if you try to **add a mutable data type (ie- list, dict)** into a set, with msg 'unhashable type'.
 
 ---
 ## JSON: JavaScript Object Notation
@@ -89,8 +105,7 @@ set_a.issubset(set_b)
 ## Git
 Git is a version control system (VCS) that has widespread use.  A VCS makes snapshots of files to be later referenced as a version; the files are organized into repositiories.
 - In order to use Git to compare versions, sometimes we will need to tell Git to track different files in a project.  
-- ??? Q about the above: isn't that the main purpose of git?
- [Good basic summary of git, including common commands](https://www.ayyjohn.com/posts/daily-git)
+- [Good basic summary of git, including common commands](https://www.ayyjohn.com/posts/daily-git)
 ### Repositories: 'repos' (aka folder, directory)
 A directory that stores project files
 ### Commits:
