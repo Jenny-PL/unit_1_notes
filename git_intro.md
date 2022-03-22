@@ -8,9 +8,8 @@ To add a commit:
 
 **git add [file] or git add . for all files**— Step 1 of committing files in git. Changes that are added here move onto a staging area (fancy git term, don’t worry about it) but are not yet committed!
 
-**git commit [file] or git commit . for all files** — Step 2 of committing files in git. This will open your VS code and request you to type in a commit message before closing.
-
-(Quick note: There are a million and one ways to do the three steps listed above! For example, I like to use the Terminal for everything and even go a step further and put in the commit message in the git commit command directly like git commit -m "First commit!" but I know Becca uses the GitHub Desktop tool and loves that! In the next few months, you’ll also figure out what makes sense for your workflow!)
+**git commit [file] or git commit . for all files** — Step 2 of committing files in git. This will open your VS code and request you to type in a commit message before closing.  
+(Alternately:  **git commit -m "First commit!"**  allows you to add the commit msg in the terminal)
 
 Now your changes are in your local git! You can check this by looking at your log via **git log** (press q to exit out of the view!)
 
