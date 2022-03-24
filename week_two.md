@@ -163,16 +163,16 @@ Steps:
 - If a virtual environment is made w/Python3, when we're inside this activated environment, we can use **python3** or **python** as commands to mean Python3.
 ## Using virtual environments
 1. Making:
-     - python3 -m venv venv
+     - **python3 -m venv venv**
 3. Activating:
-   -  $ source venv/bin/activate
+   -  $ **source venv/bin/activate**
    - We know we are in the virtual environment(venv) because the command line changes:   
   <mark>(venv) $ project-root-folder </mark>
 3. Install packages in the virtual enir:
-   - pip install -r requirements.txt  
+   - **pip install -r requirements.txt**  
    - pip install <package_name> 
 4. Deactivating
-   - . $ deactivate
+   - . $ **deactivate**
    - Command line will change back:   
    - <mark>$ project-root-folder</mark>  
 
