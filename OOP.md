@@ -10,10 +10,11 @@ Some classes we've already seen are string, boolean, and list... all have specif
 - **Behavior**: the functions (aka **methods**) that are defined within a class.
 
 - Side note: in the terminal, use **dir(variable_name)** to get a list of methods available for that class.  Also, **help(class_name)**, ie **help(str)** or **help(list)** will give more info about the class and its methods.
+
+- Give ClassNameWithPascalCase. (FYI: **PascalCase** vs. camelCase vs snake_case)
 ```
 # How to define a class: CapitalizeAndUsePascalCase 
 
-# PascalCase vs. camelCase vs snake_case
 class Car:
     pass
 
