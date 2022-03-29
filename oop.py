@@ -38,3 +38,12 @@ user_1 = User("001", "Jenny")
 print(user_1) # <__main__.User object at 0x10add5fd0>
 print(f"User 1's username is :{user_1.username}")
 
+# Learn homework:
+class BasketballTeam:
+    
+    def __init__(self):
+        self.members = []
+        
+    def add_member(self, name):
+        self.members += name
+        return True
