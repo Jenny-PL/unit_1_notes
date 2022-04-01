@@ -45,5 +45,43 @@ class BasketballTeam:
         self.members = []
         
     def add_member(self, name):
-        self.members += name
+        # self.members += [name]
+        self.members.append(name)
         return True
+
+class Automobile:
+    def __init__(self):
+        self.speed = 0
+
+    def accelerate(self, speed_delta):
+        self.speed += speed_delta
+        return self.speed
+    
+    def adjust_to_speed_limit(self, speed_limit):
+        if speed_limit == self.speed :
+            return self.accelerate(0)
+        elif speed_limit - self.speed < 0:
+            return self.accelerate(-1)
+        elif speed_limit - self.speed > 5:
+            return self.accelerate(2)
+        else:
+            return self.accelerate(1)
+
+
+
+## Q 12:
+def get_leading_team(home_team, away_team):
+    pass
+    if self.get_total_score(self,home_team) > self.get_total_score(self,away_team):
+        return self.home_team
+    else:
+        return self.away_team
+
+class BasketballTeam:
+
+    def __init__(self, team_name, initial_score_dict):
+        self.team_name = team_name
+        self.score_dict = initial_score_dict
+
+    def get_total_score(self):
+        return sum(self.score_dict.values())
