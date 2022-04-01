@@ -73,6 +73,9 @@ print(f"User 1's username is :{user_1.username}")
 ## Organizing files
 
 - Each class definition should have its own **.py** file
+- Create the __init__.py file in each package folder and subfolder, even if it is empty!
+- Python package names cannot contain hypens (-)
+- When we write our own modules, it is a best practice to gather them together into a package. 
 
 Sample Project set up:
 ```
@@ -89,6 +92,18 @@ project_name/
     ├── example_class_a_test.py
     └── example_class_b_test.py
 ```
+-- When can import an entire package. Example:
 
+    import random
 
+However, to call a method, we then have to use dot notation:
 
+    number = random.randint(0, 5)
+
+alternative way:   
+```
+from random import randint
+```
+Then when call the function:   
+
+    number = randint(0.5)
