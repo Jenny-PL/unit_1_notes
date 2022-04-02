@@ -40,7 +40,7 @@ func_mult(z = 6, x = 5) where x = 5, y =1, z = 6
 ```
 lambda x: x*x
 ```
-1.  **docstrings**:
+9.  **docstrings**:
  Describe what a function does.     
  """ One line docstring""" 
  No need for empty line before or after. Longer docstring:
@@ -98,4 +98,5 @@ Above, **map** will apply the function **func** to all the iterables in **num_li
   - for loop: may be more readable. Can be useful if you want ot iterate over only some parts... ie use a conditional or specific range.
 
 23. **zip** and **enumerate**:
-24.    
+24. **regular expressions**: Reg Ex.  
+    - To use, **import re**

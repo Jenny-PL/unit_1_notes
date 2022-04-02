@@ -85,3 +85,4 @@ class BasketballTeam:
 
     def get_total_score(self):
         return sum(self.score_dict.values())
+

@@ -107,3 +107,33 @@ from random import randint
 Then when call the function:   
 
     number = randint(0.5)
+--- 
+## More examples of OOP:
+```
+class Dog:
+    def __init__(self, name, breed, age):
+        self.name = name
+        self.breed = breed
+        self.age = age
+        # tricks is an optional parameter, as default value is given
+        self.tricks = []
+
+    def add_trick(self, trick):
+        self.tricks.append(trick)
+
+
+emma = Dog("Emma", "English Springer Spaniel", 14)
+fritz = Dog("Fritz", "Standard Schnauzer", 4)
+
+emma.add_trick("roll over")
+emma.add_trick("sit")
+
+#fritz.add_trick()
+
+dogs = [emma, fritz]
+for pupper in dogs:
+    print(f'{pupper.name} knows these tricks: {pupper.tricks}')
+
+print(f'{emma.name} is {emma.age} years old')
+print(f'{fritz.name} is {fritz.age} years old')
+```
