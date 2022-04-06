@@ -23,6 +23,7 @@ When to make a class?
 - Side note: in the terminal, use **dir(variable_name)** to get a list of methods available for that class.  Also, **help(class_name)**, ie **help(str)** or **help(list)** will give more info about the class and its methods.
 
 - Give ClassNameWithPascalCase. (FYI: **PascalCase** vs. camelCase vs snake_case)
+- Use **instace.__dict__** to print out a dict with Key:value pairs that are all of it's variables: values. 
 ```
 # How to define a class: CapitalizeAndUsePascalCase 
 
@@ -136,4 +137,52 @@ for pupper in dogs:
 
 print(f'{emma.name} is {emma.age} years old')
 print(f'{fritz.name} is {fritz.age} years old')
+```
+---
+### Examples including use of a class variable
+Demo's use of **__dict** and demo's various ways to call a method:
+- ClassName.method(instance,parameters) vs. instance.method(parameters)
+```
+class Employee:
+    # class variable: a variable with scope across all instances of the class:
+    num_of_employees = 0
+
+    def __init__(self, first_name, last_name, pay=20000): # __init__ aka 'the constructor'
+        self.first_name = first_name
+        self.last_name = last_name
+        self.pay = pay
+        self.email = first_name + "." +last_name + '@company.com'
+        self.full_name = first_name +" "+ last_name
+        # This updates the # of employees with each new instance:
+        Employee.num_of_employees +=1 
+
+    def calc_payraise(self, perc_inc):
+        new_pay = self.pay * (100+ perc_inc)/100
+        return print(f"Your new payrate is ${new_pay:.0f}.  Congrats, you earned a {perc_inc}% raise!")
+
+# Comany prior to adding employees:
+print(Employee.num_of_employees)
+
+# first instances of the class, made through instantiation
+emp_1 = Employee('Heather', "Marks")
+emp_2 = Employee('Tim', "Canner", 5000)
+
+# after instantiating 2 employees:
+print(Employee.num_of_employees)
+
+print(emp_1.email)
+print(emp_1.full_name)
+print(f"{emp_2.first_name} {emp_2.last_name} makes {emp_2.pay} a year. That is our company's base pay")
+
+# Call method beginning with the instance:
+emp_2.calc_payraise(5)
+
+# A different way to call this method, beginning with class, passing in the instance:
+Employee.calc_payraise(emp_2,5)
+
+# To print out a dictionary for the instance, with key:value pairs being instance variables:values)
+print(emp_2.__dict__)
+# output: {'first_name': 'Tim', 'last_name': 'Canner', 'pay': 5000,\
+#  'email': 'Tim.Canner@company.com', 'full_name': 'Tim Canner'}
+
 ```
