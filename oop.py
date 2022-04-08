@@ -128,3 +128,12 @@ print(emp_2.__dict__)
 # output: {'first_name': 'Tim', 'last_name': 'Canner', 'pay': 5000,\
 #  'email': 'Tim.Canner@company.com', 'full_name': 'Tim Canner'}
 
+@classmethod
+def set_rasise_amt(cls, amount):
+    cls.raise_amt = amount
+
+@staticmethod
+def is_workday(day_weekday):
+    if day_weekday == 5 or day_weekday ==6:
+        return False
+    return True

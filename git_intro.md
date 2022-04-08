@@ -1,3 +1,50 @@
+## Git
+Git is a version control system (VCS) that has widespread use.  A VCS makes snapshots of files to be later referenced as a version; the files are organized into repositiories.
+- In order to use Git to compare versions, sometimes we will need to tell Git to track different files in a project.  
+- [Good basic summary of git, including common commands](https://www.ayyjohn.com/posts/daily-git)
+### Repositories: 'repos' (aka folder, directory)
+A directory that stores project files
+### Commits:
+- An individual change to file(s), identified with a hash (hash = unique ID for the commit)
+- should have a commit message, which identifies the main changes.
+- Will contain a way to refer to the last commit, its "parent" commit
+
+<mark>Projects are not tracked with Git (and therefore don't use Git) until it is initialized as a Git project.</mark>
+
+To turn any folder into a Git project, run this command in the project root: **$ git init**
+
+### More on Git commits:
+- **git diff:** will show changes that have been made.
+- good commit size is **one** meaningful change.   
+- **git status**: This will tell us what is in the staging area
+  
+**To make a commit: (1) Put in staging area, (2) then commit.**
+- *local changes area* (only on my computer)-->  **git add <file_name>** or **git add .**--> *staging area* --> **git commmit -m "message describing the changes"**
+
+- Alternate: **git add -p** This will allow you to go throught the local changes 'hunk' by 'hunk' and choose y/n about whether to add to the staging area.
+
+Steps:
+1. git add
+2. git commit
+3. git push
+
+### Pushing to github:
+  - Copy link from github.
+  - git remote add origin [copied web address]
+  -     git remote add origin https://github.com/yourname/yourproject.git
+  - Push your branch to Github:
+  -     git push -u origin main
+--- 
+
+## Git example
+    echo "# project" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git remote add origin git@github.com:githubusername/project.git
+    git push -u origin master
+
+---
 ## Notes from TA session 3/10/22 with Goeun:
 
 To add a commit:

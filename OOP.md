@@ -20,10 +20,10 @@ When to make a class?
 - **Behavior**: the functions (aka **methods**) that are defined within a class.   
 - **instantation**: Creating a new object or instance
 
-- Side note: in the terminal, use **dir(variable_name)** to get a list of methods available for that class.  Also, **help(class_name)**, ie **help(str)** or **help(list)** will give more info about the class and its methods.
+- Side note: in the terminal, use **`dir(variable_name)`** to get a list of methods available for that class.  Also, **`help(class_name`)**, ie **`help(str)`** or **`help(list)`** will give more info about the class and its methods.
 
 - Give ClassNameWithPascalCase. (FYI: **PascalCase** vs. camelCase vs snake_case)
-- Use **instace.__dict__** to print out a dict with Key:value pairs that are all of it's variables: values. 
+- Use **`instace.__dict__`** to print out a dict with Key:value pairs that are all of it's variables: values. 
 ```
 # How to define a class: CapitalizeAndUsePascalCase 
 
@@ -140,8 +140,11 @@ print(f'{fritz.name} is {fritz.age} years old')
 ```
 ---
 ### Examples including use of a class variable
-Demo's use of **__dict** and demo's various ways to call a method:
+Demo's use of **`__dict__`** and demo's various ways to call a method:
 - ClassName.method(instance,parameters) vs. instance.method(parameters)
+- **Instance variable** vs. **Class variable**:
+  - class variable: num_of_employees
+  - instance variable: first_name, full_name, pay, etc
 ```
 class Employee:
     # class variable: a variable with scope across all instances of the class:
@@ -186,3 +189,50 @@ print(emp_2.__dict__)
 #  'email': 'Tim.Canner@company.com', 'full_name': 'Tim Canner'}
 
 ```
+---
+### Class methods and static methods
+- **class methods** use the class as the thing being passed in rather than an instance of the class (ie-self). 
+```
+@classmethod
+def set_rasise_amt(cls, amount):
+    cls.raise_amt = amount
+```
+- **static method** is a method inside of a class that does not pass in an instance of the class or the class itself.  The method for some other reason is helpful and makes sense to be included in the class definition.
+```
+@staticmethod
+def is_workday(day_weekday):
+    if day_weekday == 5 or day_weekday ==6:
+        return False
+    return True
+```
+
+---
+## Decorators, wrappers...
+
+Below, `@display_stars` is the **decorator**.
+- `display_hello_world()` is the **wrapped function**
+- `display_stars` is the **wrapper_function**.  
+- **Decorators** allow us to extend the functionality of a function.
+- Another exmple of a use for a wrapped function: Caculator function can add,subtract, and multiply. A wrapper function extends this functionaility to also check for valid input and print the results.  **A wrapper function must call the wrapped function at least one time.**
+- A wrapper function/aka decroator function **returns the inner function**
+- When we define the decorator function, it must take at least one parameter (the function being called).
+
+```
+def display_stars(wrapped_func):
+    def inner():
+        print("Some stars before we call the wrapped function...")
+        print("*************")
+        wrapped_func()
+        print("Some stars after we call the wrapped function!")
+        print("*************")
+    return inner
+```
+
+```
+@display_stars
+def display_hello_world():
+    print("Hello, World!")
+```
+---
+## Higher Order Functions
+**Higher order functions**: Take a function as a parameter or reutrn the function as a result.
