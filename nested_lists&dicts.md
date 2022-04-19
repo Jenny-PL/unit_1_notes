@@ -80,7 +80,7 @@ for i in range(len(pet_shelters)):
 # need to use extend rather than append, as append will create a nested list.
 ```
 Using '+' to add to the new list
-<mark> Why does this one not create a nested list, too? </mark> Because adding a list to a list just adds the contents.
+<mark> Why does this one not create a nested list, too? </mark> Because adding a list to a list just adds the contents. (concatinates it)
 ```
 cat_list_3 = []
 for shelter in pet_shelters:

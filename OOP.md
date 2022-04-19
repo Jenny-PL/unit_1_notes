@@ -191,13 +191,29 @@ print(emp_2.__dict__)
 ```
 ---
 ### Class methods and static methods
-- **class methods** use the class as the thing being passed in rather than an instance of the class (ie-self). 
+**class methods** use the class as the thing being passed in rather than an instance of the class (ie-self). 
 ```
 @classmethod
 def set_rasise_amt(cls, amount):
     cls.raise_amt = amount
 ```
-- **static method** is a method inside of a class that does not pass in an instance of the class or the class itself.  The method for some other reason is helpful and makes sense to be included in the class definition.
+```
+@classmethod
+def get_tax_rate(cls):
+    return cls.tax_rate
+```
+<mark> Question. </mark>
+**To call the above class method:**
+`Food.tax_rate`   
+`type(self).tax_rate`   
+
+where 'Food' is the class name
+`type(self)` can be helpful when there are subclasses and superclasses (<mark> why? </mark>)  
+ Also, if you change the class name, you don't have to update it each time it is called.
+
+---
+
+**static method** is a method inside of a class that does not pass in an instance of the class or the class itself.  The method for some other reason is helpful and makes sense to be included in the class definition.
 ```
 @staticmethod
 def is_workday(day_weekday):
@@ -235,4 +251,8 @@ def display_hello_world():
 ```
 ---
 ## Higher Order Functions
-**Higher order functions**: Take a function as a parameter or reutrn the function as a result.
+**Higher order functions**: Take a function as a parameter or returns the function as a result.  
+- examples: 
+  - map()
+  - max(): can take a list of a function, and evaluate it to find the max
+  - Decorators BOTH accept and return a function.

@@ -3,7 +3,7 @@
 - test for each attribute
 - test whether the methods do what they should
 - Our test files need to import all of the classes they depend on!   
-- Also import packages if needed. (tests as likely not in the same folders as our class modules)   
+- Also import packages if needed. (tests are likely not in the same folders as our class modules)   
 
 
 ```

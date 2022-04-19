@@ -19,7 +19,8 @@ Big O gives relative information about how long a program will take to run + how
 - Identify all the variables (count only when initialized, not when re-assigned)
 - Identify which variables have a variable size
 - identify all the operations
-- Idenity which operations are related to the variable size
+- Idenity which operations are related to the variable size   
+- Create equation; drop all constants. Find the dominant term.
 ---
 **For loops**:
 1. Count how many times a loop will run
@@ -34,6 +35,8 @@ Big O gives relative information about how long a program will take to run + how
    
 **Space complexity**   
 space = len(list)* size of item in list
+- Each variable gets counted just 1x.
+- A list will require n amount of memory, where n is length of list.
 
 ---
 **Dicts**:  
