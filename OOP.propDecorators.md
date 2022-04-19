@@ -53,3 +53,13 @@ This is the same as this, however the above is more explicit/readable:
 ```
 wrapped_function = wrapper_function(wrapped_function)
 ```
+Example:
+```
+@display_stars
+def display_gretting():
+    print("Good morning")
+
+def display_stars(display_greeting):
+    #code for wrapper function
+    display_gretting()
+    return 

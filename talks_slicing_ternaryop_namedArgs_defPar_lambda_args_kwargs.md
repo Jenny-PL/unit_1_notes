@@ -25,6 +25,7 @@ func_mult(z = 6, x = 5) where x = 5, y =1, z = 6
 ```
 6. **Default Parameters & Danger of mutables as default parameters**:
 - Default paraemters are part of the funtion definition (ie- This becomes an optional parameter for the funtion, as there is already a default value provided.)  It is dangerous to use a mutable(ie- list, dict) as a defualt parameters, because the defualt provided is used only the 1st time,then this vaue will changed based on prior value, and based on how it is modified in the function.  if the output value is different, this is the value that will then feed into the function next time that function is called.
+  - **side effects**: A lasting effect that occurs in a function, not thru its return value
 7. **\*args and \*kwargs: unknown # of parameters**
    - args: passed trhu as a tuple
    - kwargs: passed trhu as a dictionary(keyword-args)
