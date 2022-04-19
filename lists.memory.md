@@ -23,3 +23,14 @@ Each reference is 8 units in size
 We could find a reference to index 3 of a list with:
 
 reference_address = 100 + 8 * 3
+
+<mark> Q from class re: memory & lists </mark>
+- Class example frm 3/30/22:
+```
+within a for loop:
+    movie = {}
+    movie['title] = title
+    move_list.append(title) # this is appending a dict with key:value of 'title': #'indiv_movie_title' to a list of movies
+```
+Q: In the example, a new list was created each time, with just one dictinary entry.
+My Q: Why didn't it just empty out the existing list and replace it, since its the same variable name?

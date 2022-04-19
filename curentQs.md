@@ -2,9 +2,11 @@
 
 1. see OOP.md  
   - Q re: use of type(self) to call class method
+2. see lists.memory.md
+   - Q about memory/lists, and why a new list is created each time in for-loop example from class.
 ---
 
-2. Learn: Debugging Continuned (Prob setting: debugging)
+1. Learn: Debugging Continuned (Prob setting: debugging)
    - **Question 2:** print(stage)
    -  When stage is printed out using print_stage, each inner lists is displayed as one horizontal row.
 
